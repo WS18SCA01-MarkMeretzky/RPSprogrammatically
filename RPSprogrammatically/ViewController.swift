@@ -12,8 +12,8 @@ class ViewController: UIViewController {
     
     //MARK: UIViews
     
-    let appSignLabel: UILabel = UILabel();
-    let statusLabel: UILabel = UILabel();
+    let appSignLabel: UILabel = UILabel(); //robot head, then emoji of app's choice of Sign
+    let statusLabel: UILabel = UILabel();  //"You win", "You lose", etc.
     
     let rockButton: UIButton = UIButton();
     let paperButton: UIButton = UIButton();
@@ -73,6 +73,7 @@ class ViewController: UIViewController {
 
         let verticalStackView: UIStackView = UIStackView(arrangedSubviews: arrayOfViews);
         verticalStackView.axis = .vertical;
+        horizontalStackView.distribution = .equalSpacing;
         verticalStackView.spacing = 60;
         verticalStackView.alignment = .center;
         verticalStackView.translatesAutoresizingMaskIntoConstraints = false;
